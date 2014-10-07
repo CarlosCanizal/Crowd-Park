@@ -1,0 +1,38 @@
+<ion-view title="Account">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <!-- <div class='subtitle'>
+      <span>INFO</span>
+      <span class='title-line'></span>
+    </div> -->
+    <form name="accountForm" novalidate>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">First Name</span>
+          <input name="firstname" type="text" placeholder="John" ng-model="user.firstname"  required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Last Name</span>
+          <input name="lastname" type="text" placeholder="Suhr" ng-model="user.lastname" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Email</span>
+          <input name="username" type="email" placeholder="john@suhr.com" ng-model="user.username" required>
+        </label>
+      </div>
+      <div class="error" ng-if="error">
+        <span>{{error.message}}</span>
+       </div>
+      <div class="error" ng-if="accountForm.$invalid && !accountForm.$pristine">
+        <p ng-show="accountForm.firstname.$invalid && !accountForm.firstname.$pristine">Firstname is required.</p>
+        <p ng-show="accountForm.lastname.$invalid && !accountForm.lastname.$pristine">Lastname is required.</p>
+        <p ng-show="accountForm.username.$invalid && !accountForm.username.$pristine">Enter a valid email address.</p>
+      </div>
+      <div class="padding">
+        <a class="button button-block button-opacity" ng-click="updateAccount(accountForm)">Update</a>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

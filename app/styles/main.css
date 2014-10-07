@@ -1,0 +1,334 @@
+/* Your app's CSS, go crazy, make it your own */
+
+
+
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  width: 96px;
+  height: 96px;
+}
+
+/*jccanizal styles*/
+
+body, html{
+  height: 100%;
+}
+
+
+.align-center{
+  text-align: center;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+.box-icon{
+  text-align: center;
+  line-height: 3rem;
+  font-size: 2rem;
+}
+
+.float-left{
+  float: left;
+}
+
+.item.activated{
+  background-color: #1aacc3;
+}
+
+.item.selected, .item.selected *{
+  background-color: #1aacc3;
+  color: #FFF;
+}
+
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: solid 1px #ccc;
+  overflow: hidden;
+  margin: 10px auto;
+}
+
+.avatar img{
+  width: 100%;
+}
+
+.card{
+  margin-top:0;
+}
+
+.take-photo{
+  display: block;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-family: 'bebasregular';
+  font-size: 1.3rem;
+  color: #999;
+  font-weight: bolder;
+}
+
+
+ion-nav-view, ion-slide, ion-slide-box, .slider, .box{
+  height: 100%;
+}
+
+.slider1{
+  background: url(../images/slider4.jpg);
+  background-size: auto 100%;
+}
+.slider2{
+  background: url(../images/slider2.png);
+  background-size: auto 100%;
+}
+
+.slider3{
+  background: url(../images/slider3.png);
+  background-size: auto 100%;
+}
+.slider4{
+  background: url(../images/slider1.png);
+  background-size: auto 100%;
+}
+
+.circle-button{
+  width:5rem;
+  height: 5rem;
+  background-color: rgba(0,0,0,0.3);
+  margin: 2rem auto;
+  display: block;
+  border-radius: 5rem;
+  text-align: center;
+  color: #FFF;
+  font-size: 4rem;
+  line-height: 5rem;
+
+}
+
+#title1{
+  display: block;
+  position: absolute;
+  top:5rem;
+  left: 2rem;
+  font-family: 'alex_brushregular';
+  color: #FFF;
+  font-size: 5rem;
+}
+
+#title2{
+  display: block;
+  position: absolute;
+  top:10rem;
+  right: 3rem;
+  font-family: 'alex_brushregular';
+  color: #FFF;
+  font-size: 5rem;
+}
+
+#login-actions{
+  height: 100%;
+  width:100%;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
+#login-buttons{
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+.button-opacity{
+  color: #FFF;
+  background-color: rgba(0,0,0,0.3);
+  border-color:#ccc;
+}
+
+.error{
+  margin-bottom: 1rem;
+  text-align: center;
+  color:#cc2311;
+}
+
+
+ion-content{
+  background: url(../images/background.jpg);
+}
+
+h1.title{
+  font-family: 'alex_brushregular';
+  font-size: 2.5rem !important;
+}
+
+.relative{
+  position: relative;
+}
+
+.top-image{
+  font-family: 'bebasregular';
+  background: url(../images/los_angeles.jpg);
+  background-size: 100% auto;
+  height: 7rem;
+  width: 100%;
+}
+
+.top-image h1, .top-image h3{
+  font-family: 'bebasregular';
+  color: #FFF;
+  -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+}
+
+.top-image h1{
+  padding-top: 1rem;
+}
+
+.subtitle{
+  font-family: 'bebasregular';
+  padding: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  color: #666;
+}
+
+.title-line{
+  position: absolute;
+  width: 15rem;
+  border: solid 2px #999;
+  height: 1px;
+  right:1rem;
+  top:1.5rem;
+}
+
+.title-line.vehicle{
+  width: 13.5rem;
+}
+
+.title-line.card-line{
+  width: 12rem;
+}
+
+.padding{
+  padding: 0 1rem;
+}
+
+span.result{
+  font-size: 1.5rem;
+  color: #8ce621;
+}
+
+span.result-checkin{
+  font-size: 0.7rem;
+  color: #e4303c;
+  margin-top: 1.5rem;
+}
+
+span.result-checkin.inactive{
+  color: #8ce621;
+}
+
+.result-checkin-icon{
+  display: block;
+  margin:  0 auto;
+  width: 100%;
+  text-align: center;
+  color: #e4303c;
+  font-size: 1.3rem ;
+}
+
+.result.inactive{
+  color: #e4303c;
+}
+
+.result-checkin-icon.inactive{
+  color: #8ce621;
+}
+
+.item-options .button{
+  line-height: 70px;
+}
+
+form .item{
+  background-color: transparent;
+}
+
+.item-input input{
+  background-color: transparent;
+}
+
+.snap-active{
+  position: relative;
+  text-align: left;
+}
+
+.snap-active span{
+  position: absolute;
+  top:0;
+  /*font-size: 2rem;*/
+}
+
+.result.black-color{
+  color:#333;
+}
+
+.credit{
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem 0;
+  font-family: 'bebasregular';
+}
+
+span.credit{
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: #8ce621;
+}
+
+span.credit.no-credit{
+  color: #e4303c;
+}
+
+
+@font-face {
+  font-family: 'alex_brushregular';
+  src: url('alexbrush-regular-webfont.eot');
+  src: url('alexbrush-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('alexbrush-regular-webfont.woff2') format('woff2'),
+       url('alexbrush-regular-webfont.woff') format('woff'),
+       url('alexbrush-regular-webfont.ttf') format('truetype'),
+       url('alexbrush-regular-webfont.svg#alex_brushregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'bebasregular';
+  src: url('bebas___-webfont.eot');
+  src: url('bebas___-webfont.eot?#iefix') format('embedded-opentype'),
+       url('bebas___-webfont.woff2') format('woff2'),
+       url('bebas___-webfont.woff') format('woff'),
+       url('bebas___-webfont.ttf') format('truetype'),
+       url('bebas___-webfont.svg#bebasregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*jccanizal styles*/
+
+

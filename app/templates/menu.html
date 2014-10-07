@@ -1,0 +1,37 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="bar-stable bar-dark" >
+    
+      <ion-nav-back-button class="button-clear" ><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view  name="menuContent" animation="slide-left-right" ></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable bar-dark">
+      <h1 class="title">Parking App</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear menu-close ui-sref="app.account">
+          Account
+        </ion-item><ion-item nav-clear menu-close ui-sref="app.checkin">
+          Checkins
+        </ion-item>
+        <ion-item nav-clear menu-close ui-sref="app.billing">
+          Billing
+        </ion-item>
+        <ion-item nav-clear menu-close ui-sref="app.vehicles">
+          Vehicles
+        </ion-item>
+        <ion-item nav-clear menu-close ui-sref="app.snaps">
+          Snaps
+        </ion-item>
+        <ion-item nav-clear menu-close ng-click="signOut()">
+          SignOut
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,38 @@
+<div class="modal">
+  <form name="vehicleForm" id="vehicleForm"  novalidate>
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">New Vehicle</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeVehicle(vehicleForm)">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input name="name" type="text" ng-model="vehicle.name" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Plate</span>
+          <input name="plate" type="text" ng-model="vehicle.plate" required>
+        </label>
+      </div>
+      <div class="error" ng-if="error">
+        <span>{{error.message}}</span>
+      </div>
+      <div class="error" ng-if="vehicleForm.$invalid && !vehicleForm.$pristine">
+        <p ng-if="vehicleForm.name.$invalid && !vehicleForm.name.$pristine">Name is required.</p>
+        <p ng-if="vehicleForm.plate.$invalid && !vehicleForm.plate.$pristine">Plate is requerid.</p>
+      </div>
+      <div class='avatar' ng-click="addImage()">
+        <img  ng-src="{{vehicle.image}}" ng-if="vehicle.image">
+        <span class='take-photo' ng-if="!snap.image"> TAKE</span>
+        <span class='take-photo' ng-if="!snap.image">A</span>
+        <span class='take-photo' ng-if="!snap.image">PHOTO</span>
+      </div>
+      <div class="padding">
+        <a class="button button-block button-opacity" ng-click="addVehicle(vehicleForm)">Add</a>
+      </div>
+  </ion-content>
+  </form>
+</div>

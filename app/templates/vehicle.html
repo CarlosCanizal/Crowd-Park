@@ -1,0 +1,10 @@
+<ion-view title="Vehicle">
+  <ion-content class="has-header">
+    <div class='avatar' >
+      <img  ng-src="{{vehicle.image._url}}" ng-if="vehicle.image">
+      <img  ng-src="images/car.jpg" ng-if="!vehicle.image">
+    </div>
+    <h1>{{vehicle.name}}</h1>
+    <h1>{{vehicle.plate}}</h1>
+  </ion-content>
+</ion-view>

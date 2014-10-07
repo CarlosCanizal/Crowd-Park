@@ -1,0 +1,74 @@
+<ion-view title="Parking">
+  <!-- <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons> -->
+  <ion-content class="has-header">
+
+      <div class="top-image">
+        <h1 class='align-center'>
+          ${{rate.toFixed(2)}} / hr
+        </h1>
+        <h3 class='align-center'>3rd Avenue parking lot</h3>
+      </div>
+
+      <div class="content-box">
+        
+        <div class='subtitle'>
+          <span>TIME</span>
+          <span class='title-line'></span>
+        </div>
+
+        <div class='row'>
+          <div class='col col-25 box-icon' ng-click="minus()">
+            <i class="icon ion-minus-round"></i>
+          </div>
+          <div class='col col-50 box-icon'>
+            {{checkin.time}} min.
+          </div>
+          <div class='col col-25 box-icon' ng-click="plus()">
+            <i class="icon ion-plus-round"></i>        
+          </div>
+        </div>
+
+        <div class='subtitle'>
+          <span>VEHICLE</span>
+          <span class='title-line vehicle'></span>
+        </div>
+        
+        <ion-scroll direction="x" scrollbar-x="false" delegate-handle="mainScroll">
+          <div class="row">
+            <div class="col col-90" ng-repeat="vehicle in vehicles">
+              <div class="card">
+                <div class="item item-avatar" ng-class="{'selected': $index == 0}" ng-click="selectVehicle(vehicle, $event)">
+                  <img ng-src="{{vehicle.image._url}}">
+                  <h2>{{vehicle.name}}</h2>
+                  <p>{{vehicle.plate}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col col-90" ng-show="isNew">
+              <div class="card" ng-click="openVehicle()">
+                <div class="item item-avatar">
+                  Add Vehicle
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-scroll>
+        <form >
+          <input type="hidden" ng-model="checkin.plate" />
+          <input type="hidden" ng-model="checkin.time" />
+        </form>
+        <div class="error" ng-if="error">
+          <span>{{error.message}}</span>
+        </div>
+        <div class="padding">
+          <a class="button button-block button-opacity" ng-click="newCheckin()">
+            PAY {{checkin.payment}} USD
+          </a>
+        </div>
+      </div>
+
+
+  </ion-content>
+</ion-view>

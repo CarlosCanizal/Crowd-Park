@@ -1,0 +1,30 @@
+
+<ion-view title="Checkin" hide-back-button="hideBackButton">
+  <ion-nav-buttons side="left" >
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <a class="circle-button" ui-sref="app.parking({checkinId:'new'})">
+      <i class="icon ion-plus-round"></i>        
+    </a>
+    <ion-list>
+      <ion-item class="item item-avatar item-icon-right" ng-repeat="checkin in checkins" ui-sref="app.parking({checkinId:checkin.id})">
+        <img ng-src="{{checkin.vehicle.image._url}}" ng-if="checkin.vehicle.image._url">
+        <img ng-src="images/car.jpg" ng-if="!checkin.vehicle.image._url">
+        <div class="row">
+          <div class="col col-50">
+            <h2>{{checkin.vehicle.plate}}</h2>
+          </div>
+          <div class="col col-50">
+            <span class="result" ng-class="{inactive:checkin.inactive}" timer>{{checkin.countdown}}</span>
+          </div>
+        </div>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-option-button class="button-assertive" ng-click="deleteCheckin(checkin)">
+        Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
